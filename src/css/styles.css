@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@300;400&display=swap');
+
 
 
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Fredoka';
   background:radial-gradient(rgba(22, 120, 66, 0.864), rgb(13, 113, 40),  rgba(0, 245, 98, 0.487));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   margin: 5%;
+  float: right;
 }
 
 @keyframes gradient {
@@ -46,12 +49,12 @@ body {
   
 }
 #main {
-  float: right;
-  font-family:'Fredoka One';
+  font-family:'Fredoka';
   animation: gradient 4s ease infinite;
 }
 
 #main h1 {
+  font-family: 'Fredoka One';
   text-shadow: -1px 1px rgba(15, 89, 46, 0.486);
   font-size:40pt;
   float: right;
