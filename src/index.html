@@ -22,33 +22,33 @@
           <button class="bn632-hover bn22" id="changeBackground">Show Visualizer</button>
           <button class="bn632-hover bn22"id="logout-button">Logout</button>
         </div>
-    </div>
-        <div class="table" id="topTables">
-          <div class="col-sm-auto d-flex justify-content-sm-center">
-            <table class="table table-responsive table-dark" id="artists">
-              <thead>
-                <th scope="col">Top</th>
-                <th scope="col">Artists</th>
-                <th scope="col"></th>
-                <th scope="col">+ Tracks</th>
-                <th scope="col"></th>
-              </thead>
-              <tbody id="artistBody">
-              </tbody>
-            </table>
-          </div>
-          <div class="col-sm-auto">
-            <table class="table table-responsive table-dark" id="playlistTable">
-              <thead>
-                <th scope="col">Recent</th>
-                <th scope="col">Playlists</th>
-              </thead>
-              <tbody id="playlistBody"></tbody>
-            </table>
-          </div>
-          <div class="col-sm-auto">
-            <table class="table table-responsive table-dark" id="tracklistTable">
-              <thead>
+      </div>
+      <div class="table" id="topTables">
+        <table class="table table-responsive table-dark" id="artists">
+          <thead>
+          <th scope="col">Top</th>
+          <th scope="col">Artists</th>
+          <th scope="col"></th>
+          <th scope="col">+ Tracks</th>
+          <th scope="col"></th>
+          </thead>
+        <tbody id="artistBody">
+        </tbody>
+        </table>
+      </div>
+      <div class="col-sm-auto">
+      <table class="table table-responsive table-dark" id="playlistTable">
+      <thead>
+      <th scope="col">Recent</th>
+      <th scope="col">Playlists</th>
+      </thead>
+      <tbody id="playlistBody"></tbody>
+      <script src="https://sdk.scdn.co/spotify-player.js"></script>
+      </table>
+      </div>
+      <div class="col-sm-auto">
+      <table class="table table-responsive table-dark" id="tracklistTable">
+         <thead>
                 <th class="trackName" scope="col">#</th>
                 <th scope="col">Tracks</th>
               </thead>
@@ -59,17 +59,6 @@
         </div>
       </div>
       <div id="oauth"></div>
-      <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-  window.onSpotifyWebPlaybackSDKReady = () => {
-    const userAccessToken = "[access token]";
-    const webPlayback = new Spotify.Player({
-      name: "Spotify Web Playback SDK",
-      getOAuthToken: callback => { callback(userAccessToken)}
-    });
-    webPlayback.connect();
-  };
-  </script>
 
     </div>
   </div>

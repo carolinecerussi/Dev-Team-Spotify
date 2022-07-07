@@ -53,8 +53,8 @@ body {
 
 #main h1 {
   text-shadow: -1px 1px rgba(15, 89, 46, 0.486);
-
-  font-size: 50pt;
+  font-size:40pt;
+  float: right;
   animation: gradient 4s ease infinite;
   color:rgba(255, 255, 255, 0.642);
 }
@@ -72,7 +72,7 @@ body {
 #getButton {
   float: right;
   display: block;
-  margin-block-start: 20pt;
+  margin-block-start: 5%;
   width: 5%;
   font-weight: 50;
 }
@@ -121,18 +121,24 @@ a:hover:visited {
   margin-right: 33px;
   
 } */
-
+script {
+  width: 25%;
+  float:right
+}
 
 
 #topTables {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .table {
-  float: left;
+float: right;
+  width: 50%;
   opacity: 90%;
   border-radius: 20px;
   font-weight: 100;
+  margin: 20px;
+
 }
 
 #artists{
@@ -140,20 +146,23 @@ a:hover:visited {
   border-collapse: collapse;
   border-radius: 20px;
   overflow: hidden;
-  width: fit-content;
+  width:fit-content;
   margin: auto;
 }
 
 #getTopTracks {
   display: none;
+  width: fit-content;
+  min-width: 40px;
 }
 
 #artists img {
-  width: 100px;
+  width: 200px;
 }
 
 .artistNumber{
   width: fit-content;
+  font-size: 20pt;;
 }
 
 .artistName {
@@ -167,8 +176,8 @@ a:hover:visited {
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
-  margin: 20pt;
-  float: left;
+  color: white;
+  float:right;
   width:20%;
 }
 
@@ -176,18 +185,18 @@ a:hover:visited {
   display: none;
   margin: auto;
   width: fit-content;
+  font-size: 12pt;
+  color: white;
+
 }
 
 .trackName {
-  width: 55px;
+  width: 40pt;
 }
 
-/* #tracklistFrame {
-  display: none;
-  margin: auto;
-  float: left;
-  width: 25%;
-} */
+#trackListBody {
+  color:white;
+}
 
 .overlay {
   display: none;
@@ -212,17 +221,18 @@ a:hover:visited {
 
 
 .bn632-hover {
-  width: 150px;
+  width: 130px;
   font-size: 15px;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.861);
   cursor: pointer;
   margin: 10px;
-  height: 40px;
+  height: 30px;
+  float: right;
   text-align:center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 50px;
+  border-radius: 40px;
   moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;

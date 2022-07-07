@@ -103,7 +103,7 @@ import SpotifyService from './js/spotify-service.js';
             console.log('rap');
             $('.overlay').show();
             $('.overlay').css({
-              'background-image': 'linear-gradient(blue, purple)',
+              'background-image': 'linear-gradient(black, yellow)',
             });
           } else if (array[i].includes('pop') === true) {
             console.log('pop');
@@ -118,22 +118,23 @@ import SpotifyService from './js/spotify-service.js';
             $('.overlay').css({
               'background-image': 'linear-gradient(black, white)',
             });
-          } else if (array[i].includes('rap') === true) {
+          } else if (array[i].includes('soul') === true) {
             console.log('punk');
             $('.overlay').show();
             $('.overlay').css({
-              'background-image': 'linear-gradient(yellow-green, yellow)',
+              'background-image': 'linear-gradient(orange, yellow)',
             });
-          } else {
-            console.log('else');
+          } else if (array[i].includes('alternative') === true) {
             $('.overlay').show();
             $('.overlay').css({
-              'background-image': 'linear-gradient(dark-blue, green)',
+              'background-image': 'linear-gradient(purple, pink)',
             });
+          } else {
+            $('.overlay').show();
           }
         }
-      })
-      .catch((error) => {
+        })
+         .catch((error) => {
         console.error(error);
       });
   });
@@ -152,6 +153,7 @@ import SpotifyService from './js/spotify-service.js';
           let track = data.items[i].name;
           let trackBy = data.items[i].artists[0].name;
           let trackImg = data.items[i].album.images[0].url;
+          let id= data.items[i].id;
 
           $(`#artistName${i + 1}`).append(
             `<td class="trackName"id="track${
@@ -159,7 +161,7 @@ import SpotifyService from './js/spotify-service.js';
             }">${track} by <strong>${trackBy}</strong></td>`
           );
           $(`#artistName${i + 1}`).append(
-            `<td class=""><img src="${trackImg}"></img></td>`
+              `<iframe src="https://open.spotify.com/embed/track/${id}?utm_source=generator" width="200px;" height="200px" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>`
           );
         }
       })
@@ -181,11 +183,10 @@ import SpotifyService from './js/spotify-service.js';
           let playlist = data.items[i].name;
           let id = data.items[i].id;
           let number = '# ' + (i + 1);
-          let url = data.items[i].external_urls.spotify;
           $('#playlistBody').append(
             `<tr id="playlistName${i + 1}">
               <th class="playlistNumber" scope="row">${number}</th>
-              <td class="userPlaylists" id="${id}"><a href="${url}" target="_blank"><strong>${playlist}</strong></a></td>
+              <td class="userPlaylists" id="${id}"><strong>${playlist}</strong></a></td>
             <tr>`
           );
         }
@@ -241,7 +242,7 @@ import SpotifyService from './js/spotify-service.js';
           $('#tracklistiFrame').show();
           $('#tracklistTable').hide();
           $('#tracklistiFrame').append(
-            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${id}?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" id="iframe"></iframe>`
+            `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${id}?utm_source=generator" width="25%" height="400" frameBorder="0" float="left" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" id="iframe"></iframe>`
           );
         }
       })
