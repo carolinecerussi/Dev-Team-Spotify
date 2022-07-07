@@ -1,6 +1,7 @@
 # Spotify Color 
 
 #### (Brief Description of Application)
+This application allows the user to login and access specific elements from their Spotify account (such as playlists, top artists, top tracks), and start a full screen visualizer that specifically plays a color array depending on our personal music information.   
 
 #### By Alex Shevlin, Seung Lee, Caroline Cerussi, Donovan Weber, Jacob Palaoro
 
@@ -14,6 +15,8 @@
 * _See **package.json** for full list of dependencies._
 
 ## Description
+The webpage opens to a login options for a user to enter their Spotify account information. Upon login, button options allow the user to navigate to the specific top artists, top albumns, and top playlists. From there, a table with a grid view of the top albumn and song information will open, along with an index of playlists. When clicking upon the playlist options, an embed webplayer will open within the webpage that will then let you start streaming your music.
+
 
 ## Setup/Installation Requirements
 
